@@ -1,7 +1,9 @@
+import java.util.Objects;
+
 public class Character {
     private String name;
-    private float critRate;
-    private float critDamage;
+    private double criticalRate;
+    private double criticalDamage;
     private int magicResistance;
     private int dodgeChance;
     private int fireResistance;
@@ -9,19 +11,18 @@ public class Character {
     private int shockResistance;
     private int spiritResistance;
     private int natureResistance;
+    private Weapon weapon;
 
 
-    //Constructors
+    //Default Constructor
     public Character(){
-
-
 
     }
 
-    public Character(String name, float critRate, float critDamage, int magicResistance, int dodgeChance) {
+    public Character(String name, double critRate, double critDamage, int magicResistance, int dodgeChance) {
         this.name = name;
-        this.critRate = critRate;
-        this.critDamage = critDamage;
+        this.criticalRate = critRate;
+        this.criticalDamage = critDamage;
         this.magicResistance = magicResistance;
         this.dodgeChance = dodgeChance;
 
@@ -34,20 +35,20 @@ public class Character {
         return name;
     }
 
-    public float getCritDamage() {
-        return critDamage;
+    public double getCritDamage() {
+        return criticalDamage;
     }
 
-    public void setCritDamage(float critDamage) {
-        this.critDamage = critDamage;
+    public void setCritDamage(double critDamage) {
+        this.criticalDamage = critDamage;
     }
 
-    public float getCritRate() {
-        return critRate;
+    public double getCritRate() {
+        return criticalRate;
     }
 
-    public void setCritRate(float critRate) {
-        this.critRate = critRate;
+    public void setCritRate(double critRate) {
+        this.criticalRate = critRate;
     }
 
     public int getMagicResistance() {
@@ -110,9 +111,34 @@ public class Character {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Character{" +
+                "name='" + name + '\'' +
+                ", critRate=" + criticalRate +
+                ", critDamage=" + criticalDamage +
+                ", magicResistance=" + magicResistance +
+                ", dodgeChance=" + dodgeChance +
+                ", fireResistance=" + fireResistance +
+                ", iceResistance=" + iceResistance +
+                ", shockResistance=" + shockResistance +
+                ", spiritResistance=" + spiritResistance +
+                ", natureResistance=" + natureResistance +
+                '}';
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Character character = (Character) o;
+        return Double.compare(criticalRate, character.criticalRate) == 0 && Double.compare(criticalDamage, character.criticalDamage) == 0 && magicResistance == character.magicResistance && dodgeChance == character.dodgeChance && fireResistance == character.fireResistance && iceResistance == character.iceResistance && shockResistance == character.shockResistance && spiritResistance == character.spiritResistance && natureResistance == character.natureResistance && Objects.equals(name, character.name);
+    }
 
-
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, criticalRate, criticalDamage, magicResistance, dodgeChance, fireResistance, iceResistance, shockResistance, spiritResistance, natureResistance);
+    }
 
     //functions
 
