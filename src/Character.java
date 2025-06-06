@@ -15,7 +15,7 @@ public class Character {
 
     }
 
-    public Character(String name, double critRate, double critDamage, int magicResistance, int dodgeChance) {
+    public Character(String name, double critRate, double critDamage, int magicResistance, int dodgeChance, Resistances resistance) {
         this.name = name;
         this.criticalRate = critRate;
         this.criticalDamage = critDamage;
@@ -68,6 +68,15 @@ public class Character {
     public void setName(String name) {
         this.name = name;
     }
+
+
+    public Resistances getResistance() {
+        return resistance;
+    }
+    public void setResistance(Resistances resistance) {
+        this.resistance = resistance;
+    }
+
 
     @Override
     public String toString() {

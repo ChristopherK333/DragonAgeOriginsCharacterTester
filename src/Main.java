@@ -8,6 +8,9 @@ public class Main {
         Chris.setDodgeChance(10);
         System.out.println(Chris);
 
+        System.out.println(Chris.getResistance());
+        Chris.getResistance().addResistance(Resistances.ResistanceType.FIRE, 25);
+        System.out.println(Chris);
 
         Weapon StarfangLongsword = new Weapon();
 

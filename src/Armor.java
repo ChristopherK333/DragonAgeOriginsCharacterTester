@@ -6,10 +6,6 @@ public class Armor {
     private double healthRegeneration;
     private double manaRegeneration;
     private double stamRegeneration;
-    private int fireResistance;
-    private int iceResistance;
-    private int shockResistance;
-    private int spiritResistance;
-    private int natureResistance;
+    private Resistances resistance;
 
 }
