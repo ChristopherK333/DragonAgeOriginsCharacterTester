@@ -4,5 +4,8 @@ public class Weapon {
     private double criticalChance;
     private double strengthModifier;
     private double armorPenetration;
+    private double healthRegeneration;
+    private double manaRegeneration;
+    private double stamRegeneration;
 
 }

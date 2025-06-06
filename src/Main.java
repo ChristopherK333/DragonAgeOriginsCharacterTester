@@ -7,5 +7,9 @@ public class Main {
         Chris.setCritRate(3.5);
         Chris.setDodgeChance(10);
         System.out.println(Chris);
+
+
+        Weapon StarfangLongsword = new Weapon();
+
     }
 }
