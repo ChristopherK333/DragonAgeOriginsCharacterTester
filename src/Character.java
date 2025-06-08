@@ -12,6 +12,8 @@ public class Character {
 
     //Default Constructor
     public Character(){
+        //The default constructor needs this so resistances will not be null when initialized if not given resistances
+        this.resistance = new Resistances();
 
     }
 
@@ -21,6 +23,7 @@ public class Character {
         this.criticalDamage = critDamage;
         this.magicResistance = magicResistance;
         this.dodgeChance = dodgeChance;
+        this.resistance = resistance; //if needed swap this to new resistance to always create a new one
 
     }
 

@@ -10,7 +10,7 @@ public class Main {
 
         System.out.println(Chris.getResistance());
         Chris.getResistance().addResistance(Resistances.ResistanceType.FIRE, 25);
-        System.out.println(Chris);
+        System.out.println("This is with the added resistance:" + Chris.getResistance());
 
         Weapon StarfangLongsword = new Weapon();
 

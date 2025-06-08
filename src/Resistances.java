@@ -14,12 +14,24 @@ public class Resistances {
     //EnumMap is used to store resistance values
     private EnumMap<ResistanceType, Integer> resistanceMap;
 
+
+    //Constructor for default empty
     public Resistances() {
         resistanceMap = new EnumMap<>(ResistanceType.class);
         for(ResistanceType type : ResistanceType.values()) {
             resistanceMap.put(type, 0);
         }
     }
+
+    //Constructor for spefcific resistances
+    public Resistances(Map<ResistanceType, Integer> initialValues) {
+        resistanceMap = new EnumMap<>(ResistanceType.class);
+        for(ResistanceType type : ResistanceType.values()) {
+            resistanceMap.put(type, initialValues.getOrDefault(type, 0));
+        }
+    }
+
+
 
     public int getResistance(ResistanceType type) {
         return resistanceMap.get(type);
