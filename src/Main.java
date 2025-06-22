@@ -2,7 +2,7 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Character Chris = new Character();
+        CharacterOld Chris = new CharacterOld();
         Chris.setName("Chris");
         Chris.setCritRate(3.5);
         Chris.setDodgeChance(10);
