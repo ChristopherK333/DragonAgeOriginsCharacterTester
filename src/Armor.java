@@ -9,7 +9,7 @@ public class Armor {
     private double healthRegeneration;
     private double manaStamRegeneration;
     private Resistances resistance;
-
+    private String slot;
 
     public double getArmor() {
         return armor;
@@ -59,6 +59,9 @@ public class Armor {
     public void setResistance(Resistances resistance) {
         this.resistance = resistance;
     }
+
+
+
 
     @Override
     public boolean equals(Object o) {
