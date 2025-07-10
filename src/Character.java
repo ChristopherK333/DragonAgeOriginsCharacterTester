@@ -8,11 +8,30 @@ public class Character {
     private List<Armor> armor;
     private Resistances resistances;
 
-    public void addWeapon(Weapon weapon){
+    public void equipWeapon(Weapon weapon){
+        if(mainWeapon == null) {
+            this.mainWeapon = weapon;
+            System.out.println("equipped: " + weapon.getName());
+        }
+        else if(offHand == null) {
+            this.offHand = weapon;
+            System.out.println("equipped: " + weapon.getName());
+        }
+        else{
+            System.out.println("already have two weapons and/or a weapon and shield equipped");
+        }
     }
-    public void addArmor(Armor armor){
+    public void unequipMainWeapon(){
+        this.mainWeapon = null;
+    }
+    public void unequipOffHand(){
+        this.offHand = null;
+    }
+
+    public void equipArmor(Armor armor){
 
     }
+    public void unequipArmor(Armor armor){}
 
     public String getName() {
         return name;

@@ -18,6 +18,11 @@ public class Main {
         Character Chris = new Character();
         Chris.setName("Chris");
         System.out.println(Chris);
+        Weapon Starfang = new Weapon();
+        Starfang.setName("Starfang");
+        Starfang.setDamage(11.20);
+        Chris.equipWeapon(Starfang);
+        System.out.println(Chris);
 
     }
 }
